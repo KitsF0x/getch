@@ -6,7 +6,6 @@
 
 char getch() {
   char getch_input = 0;
-  getch_input = 0;
   while (getch_input == 0) {
     for (char i = 97; i < 122; i++) {
       if (GetAsyncKeyState(toupper(i))) {
