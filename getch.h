@@ -12,6 +12,10 @@ char getch() {
         while (1) {
           if (!GetAsyncKeyState(toupper(i))) {
             getch_input = i;
+            // Uppercase
+            if (GetAsyncKeyState(VK_SHIFT)) {
+              getch_input -= 32;
+            }
             break;
           }
         }
